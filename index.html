@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast Tracker</h1>
+
+        <!-- Weather Data List -->
+        <div class="we-list">
+            <h2>Weather Data:</h2>
+            <ul id="Weatherlist"></ul>
+        </div>
+
+        <!-- Add New City Form -->
+        <div class="addcity">
+            <h2>Add New City Weather</h2>
+            <form id="cityweather" onsubmit="f1(event)">
+                <label for="name">City Name:</label>
+                <input type="text" id="name" placeholder="City Name" required>
+                
+                <label for="temp">Temperature (°C):</label>
+                <input type="number" id="temp" placeholder="Temperature (°C)" required>
+                
+                <label for="condition">Condition:</label>
+                <input type="text" id="condition" placeholder="Condition" required>
+                
+                <button type="submit">Add City</button>
+            </form>
+        </div>
+
+        <!-- Hottest City Section -->
+        <div class="hottest-city">
+            <h2>Hottest City</h2>
+            <p id="hottestCity">Click the button to find the hottest city.</p>
+            <button onclick="findHottestCity()">Find Hottest City</button>
+        </div>
+
+        <!-- Filter by Condition Section -->
+        <div class="filter-condition">
+            <h2>Filter by Condition</h2>
+            <input type="text" id="filterCondition" placeholder="Enter Condition">
+            <button onclick="filterByCondition()">Filter</button>
+            <ul id="filteredCities"></ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
